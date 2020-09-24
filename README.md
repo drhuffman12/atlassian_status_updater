@@ -1,8 +1,8 @@
 # AtlassianStatusUpdater
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/atlassian_status_updater`. To experiment with that code, run `bin/console` for an interactive prompt.
+For now, utility code to just look for 'doneish' issues and try to close them. (Maybe add more functionality later?)
 
-TODO: Delete this and the text above, and describe your gem
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/atlassian_status_updater`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Copy `.env.example` to `.env` and populate the values as applicable.
+
+Run `bundle install`.
+
+To status-change to 'Closed', run `INGORE_PREV_SKIPS=true RUN_VERBOSE=false ruby bin/test_2.rb`; adjusting the env var's (INGORE_PREV_SKIPS and RUN_VERBOSE) as applicable.
 
 ## Development
 
