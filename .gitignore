@@ -9,3 +9,6 @@
 
 # rspec failure tracking
 .rspec_status
+.env
+errored_tickets.log
+successful_ticket_keys.log

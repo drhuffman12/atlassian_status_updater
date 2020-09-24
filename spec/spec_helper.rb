@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "atlassian_status_updater"
+require "asu"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
