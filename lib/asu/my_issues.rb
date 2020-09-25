@@ -1,8 +1,8 @@
 
 module Asu
   class MyIssues
-    STATUS_CLOSED = '6' # '6'
-    # STATUS_CLOSED = '51' # '6'
+    # STATUS_CLOSED = '6' # This works for some
+    STATUS_CLOSED = '51' # ... but this works for more; why???
     STATUS_CLOSED_HASH = {
       "self"=>"https://linuxacademy.atlassian.net/rest/api/2/status/6",
       "description"=>"The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.",
