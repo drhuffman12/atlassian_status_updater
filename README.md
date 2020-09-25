@@ -1,6 +1,7 @@
 # AtlassianStatusUpdater
 
 For now, utility code to just look for 'doneish' issues and try to close them. (Maybe add more functionality later?)
+NOTE: This is somewhat experimental. Tread lightly.
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/atlassian_status_updater`. To experiment with that code, run `bin/console` for an interactive prompt.
 
