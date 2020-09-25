@@ -26,7 +26,7 @@ Copy `.env.example` to `.env` and populate the values as applicable.
 
 Run `bundle install`.
 
-To status-change to 'Closed', run `INGORE_PREV_SKIPS=true RUN_VERBOSE=false ruby bin/close_tickets.rb`; adjusting the env var's (INGORE_PREV_SKIPS and RUN_VERBOSE) as applicable.
+To status-change to 'Closed', run `MAX_RESULTS=3 INGORE_PREV_SKIPS=false RUN_VERBOSE=false ruby bin/close_tickets.rb`; adjusting the env var's (INGORE_PREV_SKIPS and RUN_VERBOSE) as applicable.
 
 ## Development
 

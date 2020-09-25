@@ -3,11 +3,10 @@ require 'asu'
 
 user_id = ENV['USERNAME'] # or other user as applicable
 
-max_results = 3
+max_results = ENV['MAX_RESULTS'].to_i
+max_results = max_results > 0 ? max_results : 3
 # max_results = 10
-# max_results = 20
 # max_results = 100 # API seems to limit to max of 100
-# max_results = 40
 # max_results = 400 # still returns at most 100
 
 verbose = ['t', 'true', '1'].include?(ENV['RUN_VERBOSE'].to_s)
