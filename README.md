@@ -22,11 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-Copy `.env.example` to `.env` and populate the values as applicable.
+1. Copy `.env.example` to `.env` and populate the values as applicable.
 
-Run `bundle install`.
+2. Run `bundle install`.
 
-To status-change to 'Closed', run `MAX_RESULTS=3 INGORE_PREV_SKIPS=false RUN_VERBOSE=false ruby bin/close_tickets.rb`; adjusting the env var's (INGORE_PREV_SKIPS and RUN_VERBOSE) as applicable.
+3. To status-change to 'Closed', run
+
+  ```
+  MAX_RESULTS=3 INGORE_PREV_SKIPS=false RUN_VERBOSE=false ruby bin/close_tickets.rb
+  ````
+
+  ... but first adjusting the env var's (MAX_RESULTS, INGORE_PREV_SKIPS and RUN_VERBOSE) as applicable:
+  * MAX_RESULTS: How many ticket to check
+  * INGORE_PREV_SKIPS: 
+    * `true` (to NOT 'seed' the skips from `log/errored_tickets.log`)
+    * `false` (to 'seed' the skips from `log/errored_tickets.log`)
+
+    Each time this script runs, it first checks for skipped tickets noted in `log/errored_tickets.log` and will ignore those in the `jql` search.
+
+    As it runs, it collects any 'error' tickets that it wasn't able to status-change.
+
+    At the end, it will add (merge) the error tickets to `log/errored_tickets.log` and put (replace) the successful tickets to `log/successful_ticket_keys.log`
 
 ## Development
 
